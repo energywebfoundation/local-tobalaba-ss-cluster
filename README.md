@@ -1,5 +1,6 @@
-# Local Tobalaba network
-Setting up a local Tobalaba-like network with ease.
+# Local Tobalaba Secret Store cluster
+Setting up a local Tobalaba-like Secret Store cluster with ease.
+**Warning**: Here, the Secret Store nodes are validator nodes too (for simplicity), which should not be the case ideally.
 
 ## Maintainers
 **Primary**: Adam Nagy (@ngyam)
@@ -7,7 +8,7 @@ Setting up a local Tobalaba-like network with ease.
 ## Contents
 
  - [`chainspec folder`](./chainspec): chainspec files
- - [`network_local_tobalaba folder`](./network_tobalabalocal): scripts and settings for a local Tobalaba-like PoA network:
+ - [`network_local_tobalaba folder`](./ss_cluster_local_tobalaba): scripts and settings for a local Tobalaba-like Secret Store cluster:
     - 3 nodes configured to connect with each other (alice, bob and charlie)
     - 3 accounts
     - 3 separate db-s
@@ -18,7 +19,7 @@ Setting up a local Tobalaba-like network with ease.
 1. Place your [Parity binary](https://github.com/paritytech/parity-ethereum) to project root
 2. Rev up the nodes with:
     ```bash
-    cd network_local_tobalaba
+    cd ss_cluster_local_tobalaba
     ./start.sh
     ```
     You should see in the logs that your nodes are connected, having 2 peers:
@@ -49,7 +50,7 @@ Sending money from pre-funded rich account, `0x00a329c0648769a73afac7f9381e08fb4
 Each node writes to separate log files too.
 E.g. for node "alice" it can be seen in:
 ```bash
-tail -f network_local_tobalaba/db.alice/parity.log
+tail -f ss_cluster_local_tobalaba/db.alice/parity.log
 ```
 
 ## Contributing
@@ -61,4 +62,7 @@ When contributing to this repository, please first discuss the change you wish t
 As for everything else in the project, the contributions to the repo are governed by our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ## Resources
-For more information, check out Parity's local PoA tutorial: https://wiki.parity.io/Demo-PoA-tutorial
+For more information, check out Parity's..
+ - local PoA tutorial: https://wiki.parity.io/Demo-PoA-tutorial
+ - Secret Store configuration wiki page: https://wiki.parity.io/Secret-Store-Configuration
+ - Secret Store tutorial: https://wiki.parity.io/Secret-Store-Tutorial-overview
