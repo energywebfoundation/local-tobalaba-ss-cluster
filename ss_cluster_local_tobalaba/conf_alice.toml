@@ -47,7 +47,7 @@ interface = "all"
 port = 8083
 http_interface = "all"
 http_port = 8090    
-path = "db.dev_ss_alice/secretstore"
+path = "db.alice/secretstore"
 nodes = [
     "22417f6b9ecbaafbd10f33797161aaf0b8e74a0ce3aea19bb32b92c081e82780346c6f4f7aa619a8b3841f057dac8d31b8f75a241357420b25e9420b3918ac4b@127.0.0.1:8083",
     "413ecc85852cc4087ac8527c76be43cba57a5015f7a48da29c9c9123877474f8ac2406657274abfeee68bfc31c791d44358830e5983a2dba8b4235bd03253f0e@127.0.0.1:8085",
