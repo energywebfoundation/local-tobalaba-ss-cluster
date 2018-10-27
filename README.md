@@ -1,5 +1,7 @@
 # Local Tobalaba Secret Store cluster
 Setting up a local Tobalaba-like Secret Store cluster with ease.
+
+
 **Warning**: Here, the Secret Store nodes are validator nodes too (for simplicity), which should not be the case ideally.
 
 ## Maintainers
