@@ -7,7 +7,7 @@ disable = false
 
 [rpc]
 disable = false
-apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+apis = ["all"]
 port = 8545
 cors = ["*"]
 
@@ -37,6 +37,7 @@ disable_periodic = true
 [secretstore]
 disable = false
 disable_http = false
+disable_auto_migrate = true
 admin_public = "39bf56d6183d8e266aa653265ecb6d250d3a8eddda0ffb5ec2a3a0049ca2050ed5e755b2c5e7e9a0adea988cc81f2f7e2084294555fbd10e21fb2060a3a18910"
 #acl_contract = "731a10897d267e19B34503aD902d0A29173Ba4B1"
 acl_contract = "none"
@@ -54,7 +55,7 @@ nodes = [
 ]
 
 [misc]
-logging = "transaction_pool=trace,txqueue=trace,own_tx=trace"
+logging = "transaction_pool=trace,txqueue=trace,ethcore_private_tx=trace,own_tx=trace"
 log_file = "./db.alice/parity.log"
 color = true
 
